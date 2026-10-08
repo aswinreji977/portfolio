@@ -1,110 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aswin Reji | Portfolio</title>
+  <meta name="description" content="Aswin Reji — QA Engineer specializing in manual testing, Playwright, Selenium with Java, Maestro and AI-assisted QA." />
+  <title>Aswin Reji | QA Engineer Portfolio</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(59,130,246,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,130,246,.06) 1px, transparent 1px);
+      background-size: 32px 32px;
     }
+    .gradient-text {
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .card { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 35px rgba(15,23,42,.09); border-color: rgba(59,130,246,.35); }
+    .tag { background: #eff6ff; color: #1d4ed8; }
   </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
-  <!-- Header -->
-  <header class="bg-white shadow-md">
-    <div class="max-w-5xl mx-auto px-4 py-6 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-600">Aswin Reji</h1>
-    <nav class="flex items-center space-x-4 text-sm">
-  <a href="#about" class="hover:text-blue-600">About</a>
-  <a href="#projects" class="hover:text-blue-600">Projects</a>
-  <a href="#skills" class="hover:text-blue-600">Skills</a>
-  <a href="#experience" class="hover:text-blue-600">Experience</a>
-  <a href="#contact" class="hover:text-blue-600">Contact</a>
-  <a href="Aswin_Reji.pdf" target="_blank" class="ml-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition text-sm">
-    View CV
-  </a>
-</nav>
+<body class="bg-slate-50 text-slate-800">
 
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="#home" class="text-xl font-extrabold tracking-tight">Aswin<span class="text-blue-600">.</span></a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#automation" class="hover:text-blue-600">AI & Automation</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+        <a href="#experience" class="hover:text-blue-600">Experience</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
+
+     
     </div>
   </header>
 
-  <!-- About -->
-  <section id="about" class="max-w-5xl mx-auto px-4 py-16">
-    <h2 class="text-3xl font-semibold text-blue-600 mb-8">About Me</h2>
-    <div class="flex flex-col md:flex-row items-center gap-8">
-      <img src="aswin.png" alt="Profile Photo" class="w-40 h-40 rounded-full object-cover shadow-md" />
-      <p class="text-lg leading-relaxed">
-        I'm a diligent QA Tester with 2 years of experience in software testing and quality assurance.
-        Proficient in developing useful test cases, detecting bugs and verifying product functionality.
-      </p>
-    </div>
-  </section>
+  <!-- Hero -->
+  <main id="home">
+    <section class="hero-grid bg-white">
+      <div class="max-w-6xl mx-auto px-5 py-20 md:py-28 grid md:grid-cols-[1.35fr_.65fr] gap-12 items-center">
+        <div>
+          <p class="text-blue-600 font-semibold mb-4">QA ENGINEER · MANUAL + AUTOMATION · AI-ASSISTED QA</p>
+          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+            Building better software through
+            <span class="gradient-text">smarter testing.</span>
+          </h1>
+          <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed">
+            QA Engineer experienced across web portals, admin dashboards and iOS/Android apps.
+            I combine strong manual and exploratory testing with Playwright, Selenium/Java,
+            Maestro and practical AI-assisted QA workflows.
+          </p>
 
-  <!-- Projects -->
-  <section id="projects" class="bg-white py-16">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-semibold text-blue-600 mb-8">Projects</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 border rounded-lg shadow-sm hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">BFS Project</h3>
-          <p>Worked on a BFS Project of a US based client. Conducted detailed manual testing to identify
-            critical bugs and to ensure the delivery of high-quality software.
-            Provided a solution for a task that was taking a significant amount of time, optimizing efficiency.
-            Performed functional, regression, sanity, integration testing and system testing.
-            Tested data flow scenarios, ensuring accurate transfer of data between applications, within
-            application modules, and into downloadable formats such as PDFs and Excel files</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700">Explore Projects</a>
+            <a href="#contact" class="border border-slate-300 bg-white px-5 py-3 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600">Get in Touch</a>
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-sm text-slate-500">
+            <span><strong class="text-slate-800">15+</strong> client products</span>
+            <span><strong class="text-slate-800">Web + Mobile</strong> QA</span>
+            <span><strong class="text-slate-800">Playwright</strong> + Selenium</span>
+            <span><strong class="text-slate-800">AI-assisted</strong> workflows</span>
+          </div>
         </div>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills" class="max-w-5xl mx-auto px-4 py-16">
-    <h2 class="text-3xl font-semibold text-blue-600 mb-4">Skills</h2>
-    <ul class="list-disc ml-6 space-y-2 text-lg">
-      <li>Manual Testing</li>
-      <li>Automation testing using Selenium with Java</li>
-      <li>Knowledge in TDD and BDD frameworks</li>
-      <li>Experience in Project Management Tools like VersionOne and JIRA</li>
-      <li>Identifying and documenting bugs with precision</li>
-      <li>Offering solutions for efficiency and quality improvement</li>
-      <li>Collaborating effectively with development and project teams</li>
-    </ul>
-  </section>
-
-  <!-- Work Experience -->
-  <section id="experience" class="max-w-5xl mx-auto px-4 py-16">
-    <h2 class="text-3xl font-semibold text-blue-600 mb-8">Work Experience</h2>
-
-    <div class="space-y-8">
-      <div class="border-l-4 border-blue-600 pl-4">
-        <h3 class="text-xl font-semibold">Software QA Tester - Cognizant Technology Solutions India</h3>
-        <p class="text-sm text-gray-500">30/10/2021 To 31/10/2023</p>
-        <ul class="list-disc ml-6 mt-2 space-y-1 text-lg">
-          <li>Conducted detailed manual testing to identify
-            critical bugs and to ensure the delivery of high-quality software.</li>
-        </ul>
+        <div class="flex justify-center md:justify-end">
+          <div class="relative">
+            <div class="absolute -inset-3 rounded-3xl bg-blue-100 blur-2xl opacity-60"></div>
+            <div class="relative bg-white border border-slate-200 rounded-3xl p-3 shadow-xl">
+              <img src="aswin.png" alt="Aswin Reji" class="w-56 h-56 md:w-64 md:h-64 rounded-2xl object-cover" />
+              <div class="px-3 py-4">
+                <p class="font-bold">Aswin Reji</p>
+                <p class="text-sm text-slate-500 mt-1">QA Engineer · Manual & Automation Testing</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-  </section>
+    <!-- About -->
+    <section id="about" class="max-w-6xl mx-auto px-5 py-20">
+      <div class="max-w-3xl">
+        <p class="text-blue-600 font-semibold text-sm uppercase tracking-wider">About Me</p>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Quality beyond just finding bugs.</h2>
+        <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+          I work across the full QA cycle — understanding requirements and designs, creating test scenarios,
+          executing functional and exploratory testing, reporting defects with evidence, supporting UAT,
+          retesting fixes and helping teams ship stable releases.
+        </p>
+        <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+          My recent work spans fintech, PropTech, IoT, logistics, marketplaces, event booking, government
+          and gaming e-commerce. I also build reusable QA tooling that combines Claude and automation
+          frameworks to reduce repetitive work while keeping test execution deterministic.
+        </p>
+      </div>
+    </section>
 
+    <!-- Highlights -->
+    <section class="bg-slate-900 text-white">
+      <div class="max-w-6xl mx-auto px-5 py-14 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div><p class="text-3xl font-extrabold">15+</p><p class="text-slate-400 mt-1">Client products tested</p></div>
+        <div><p class="text-3xl font-extrabold">40+</p><p class="text-slate-400 mt-1">Sprint test rounds</p></div>
+        <div><p class="text-3xl font-extrabold">161</p><p class="text-slate-400 mt-1">Automation cases planned</p></div>
+        <div><p class="text-3xl font-extrabold">21</p><p class="text-slate-400 mt-1">AI test coverage categories</p></div>
+      </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-white py-16">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-semibold text-blue-600 mb-4">Contact</h2>
-      <p class="mb-2 text-lg">📧 Email: aswinreji977@gmail.com</p>
+    <!-- Projects -->
+    <section id="projects" class="bg-white py-20">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="mb-10">
+          <p class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Selected Work</p>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2">Projects & Product Experience</h2>
+          <p class="text-slate-600 mt-3 max-w-2xl">
+            A selection of projects showing the range of products, domains and testing approaches I have worked with.
+          </p>
+        </div>
 
-    </div>
-  </section>
+        <div class="grid md:grid-cols-2 gap-6">
 
-  <!-- Footer -->
-  <footer class="bg-gray-100 text-center text-sm text-gray-500 py-4">
+          <article class="card bg-slate-50 border border-slate-200 rounded-2xl p-7">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class="tag text-xs font-semibold px-2.5 py-1 rounded-full">Fintech · PropTech</span>
+                <h3 class="text-xl font-bold mt-4">Real Estate Investment Platform</h3>
+              </div>
+              <span class="text-sm text-slate-400">2025–2026</span>
+            </div>
+            <p class="mt-4 text-slate-600">
+              Tested customer and admin journeys covering registration, OTP, KYC, property investment,
+              wallet, payments, portfolio, disbursement and rent distribution.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc ml-5">
+              <li>Executed sprint, smoke, regression and UAT rounds.</li>
+              <li>Covered Arabic RTL and CMS pages against Figma designs.</li>
+              <li>Tested mobile flows, push notifications and email templates.</li>
+            </ul>
+          </article>
 
+          <article class="card bg-slate-50 border border-slate-200 rounded-2xl p-7">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class="tag text-xs font-semibold px-2.5 py-1 rounded-full">PropTech · Web + Mobile</span>
+                <h3 class="text-xl font-bold mt-4">Real Estate Marketplace</h3>
+              </div>
+              <span class="text-sm text-slate-400">2025–2026</span>
+            </div>
+            <p class="mt-4 text-slate-600">
+              QA across customer, agency and admin portals plus mobile apps, with strong focus on
+              exploratory testing, subscriptions, packages, payments and UAT.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc ml-5">
+              <li>Designed a Playwright strategy for 161 test cases using Page Object Model and CI/CD.</li>
+              <li>Tested Arabic RTL flows and iOS/Android differences.</li>
+              <li>Joined client demos and tracked issues through regression and UAT.</li>
+            </ul>
+          </article>
+
+          <article class="card bg-slate-50 border border-slate-200 rounded-2xl p-7">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class="tag text-xs font-semibold px-2.5 py-1 rounded-full">IoT · Automation</span>
+                <h3 class="text-xl font-bold mt-4">IoT Device Management Platform</h3>
+              </div>
+              <span class="text-sm text-slate-400">2026</span>
+            </div>
+            <p class="mt-4 text-slate-600">
+              Tested a cloud-connected wellness platform for device registration, live telemetry,
+              device operations, dashboards and B2B workflows.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc ml-5">
+              <li>Created and executed 75+ test cases from designs and requirements.</li>
+              <li>Found access-control, session-handling and data-integrity gaps.</li>
+              <li>Started a Playwright/TypeScript framework with page objects and failure artifacts.</li>
+            </ul>
+          </article>
+
+          <article class="card bg-slate-50 border border-slate-200 rounded-2xl p-7">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class="tag text-xs font-semibold px-2.5 py-1 rounded-full">Logistics · Selenium + Playwright</span>
+                <h3 class="text-xl font-bold mt-4">Vendor Management Portal</h3>
+              </div>
+              <span class="text-sm text-slate-400">2026</span>
+            </div>
+            <p class="mt-4 text-slate-600">
+              Multi-role logistics portal covering admin, supplier, buyer, producer, quality-control
+              and operator workflows.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc ml-5">
+              <li>Executed release testing across 31+ test plans.</li>
+              <li>Covered order/lot workflows, document submission, reporting and data checks.</li>
+              <li>Automated with Java/Selenium and built a Playwright/TypeScript scaffold.</li>
+            </ul>
+          </article>
+
+          <article class="card bg-slate-50 border border-slate-200 rounded-2xl p-7">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class="tag text-xs font-semibold px-2.5 py-1 rounded-full">Mobile · Marketplace</span>
+                <h3 class="text-xl font-bold mt-4">Multi-vendor Marketplace</h3>
+              </div>
+              <span class="text-sm text-slate-400">2025</span>
+            </div>
+            <p class="mt-4 text-slate-600">
+              Tested website, supplier/customer dashboards and iOS/Android apps across UAT, sprint,
+              reopen and regression rounds.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc ml-5">
+              <li>Covered payments, push notifications, support, orders and service booking.</li>
+              <li>Found crash, data-loss, login and validation defects.</li>
+              <li>Compared mobile and web functionality to identify feature gaps.</li>
+            </ul>
+          </article>
+
+          <article class="card bg-slate-50 border border-slate-200 rounded-2xl p-7">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class="tag text-xs font-semibold px-2.5 py-1 rounded-full">Gaming · E-commerce</span>
+                <h3 class="text-xl font-bold mt-4">Gaming E-commerce Delivery Automation</h3>
+              </div>
+              <span class="text-sm text-slate-400">2026</span>
+            </div>
+            <p class="mt-4 text-slate-600">
+              Tested a bot-driven delivery system where virtual Android devices complete in-game
+              gifts and trades for products sold through an e-commerce store.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc ml-5">
+              <li>Covered eligibility gates, split orders and QR continuation flows.</li>
+              <li>Created test workbooks and reconciled cases with automation specifications.</li>
+              <li>Used AI-assisted browser execution and CSV-based result reporting.</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <div class="mt-8 p-6 rounded-2xl border border-blue-100 bg-blue-50">
+          <h3 class="font-bold text-lg">Additional domain exposure</h3>
+          <p class="mt-2 text-slate-600 leading-relaxed">
+            Event & venue booking · Mentoring marketplaces · Government land & real estate portals ·
+            Beauty & wellness marketplaces · Retail POS · Chat platforms · Corporate and WordPress websites ·
+            Tailoring and mobile applications.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI & Automation -->
+    <section id="automation" class="py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="max-w-3xl">
+          <p class="text-blue-600 font-semibold text-sm uppercase tracking-wider">AI & Automation</p>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2">Using AI as a QA accelerator — not a replacement for testing.</h2>
+          <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+            I build reusable Claude-powered QA workflows around real testing activities while keeping
+            execution reproducible through Playwright and Maestro.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+          <div class="card bg-white border border-slate-200 rounded-2xl p-6">
+            <div class="text-2xl">⚙️</div>
+            <h3 class="font-bold text-lg mt-4">QA Workflow Skills</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Test case generation across 21 coverage categories, live execution reporting, evidence
+              capture, bug CSVs, sprint reports and UAT-to-Zoho issue reporting.
+            </p>
+          </div>
+
+          <div class="card bg-white border border-slate-200 rounded-2xl p-6">
+            <div class="text-2xl">🧪</div>
+            <h3 class="font-bold text-lg mt-4">Automation Playbook</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Authored a 32-page QA automation playbook covering Playwright web automation and Maestro
+              mobile automation, then turned it into a Claude Project assistant.
+            </p>
+          </div>
+
+          <div class="card bg-white border border-slate-200 rounded-2xl p-6">
+            <div class="text-2xl">📊</div>
+            <h3 class="font-bold text-lg mt-4">QA Productivity Tools</h3>
+            <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+              Built a Zoho Cliq QC Daily Task Collector and a bilingual Test Data Generator,
+              alongside reusable templates, prompts and reporting workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="bg-white py-20">
+      <div class="max-w-6xl mx-auto px-5">
+        <p class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Toolkit</p>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Skills & Technologies</h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+          <div class="border border-slate-200 rounded-2xl p-6">
+            <h3 class="font-bold">Testing</h3>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="tag px-3 py-1 rounded-full text-sm">Manual</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Exploratory</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Functional</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Regression</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">UAT</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Smoke</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Mobile</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">RTL/LTR</span>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl p-6">
+            <h3 class="font-bold">Automation</h3>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="tag px-3 py-1 rounded-full text-sm">Playwright</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">TypeScript</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Selenium</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Java</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Maestro</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Cucumber</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">BDD</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">POM</span>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl p-6">
+            <h3 class="font-bold">AI & Tools</h3>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="tag px-3 py-1 rounded-full text-sm">Claude</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Claude Code</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Claude Projects</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">MCP</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Zoho Projects</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Zoho TestManagement</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Jira</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">VersionOne</span>
+            </div>
+          </div>
+
+          <div class="border border-slate-200 rounded-2xl p-6">
+            <h3 class="font-bold">Engineering Practices</h3>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="tag px-3 py-1 rounded-full text-sm">Git/GitHub</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">TestNG</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">JUnit</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Maven</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">CI/CD</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Figma</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Excel</span>
+              <span class="tag px-3 py-1 rounded-full text-sm">Defect Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-5">
+        <p class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Experience</p>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Professional Journey</h2>
+
+        <div class="mt-10 space-y-8">
+          <div class="bg-white border border-slate-200 rounded-2xl p-7">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+              <div>
+                <h3 class="text-xl font-bold">QA Engineer · Ewaantech Technologies</h3>
+                <p class="text-blue-600 font-medium mt-1">Jun 2025 – Present</p>
+              </div>
+              <span class="text-sm text-slate-400">Quality Assurance</span>
+            </div>
+            <p class="mt-5 text-slate-600 leading-relaxed">
+              QA across multiple concurrent client products, from requirement understanding and test planning
+              through execution, defect reporting, automation, UAT, reporting and knowledge sharing.
+            </p>
+            <div class="grid md:grid-cols-2 gap-3 mt-5 text-sm text-slate-600">
+              <p>• Web portals, admin dashboards and iOS/Android applications</p>
+              <p>• Fintech, PropTech, IoT, logistics, marketplaces and government</p>
+              <p>• Playwright/TypeScript, Selenium/Java and Maestro</p>
+              <p>• Client demos, UAT, sprint rounds and regression</p>
+              <p>• Reusable Claude QA skills and automation workflows</p>
+              <p>• Team knowledge sharing and Playwright onboarding</p>
+            </div>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-2xl p-7">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+              <div>
+                <h3 class="text-xl font-bold">QA Software Tester · Cognizant Technology Solutions Pvt. Ltd.</h3>
+                <p class="text-blue-600 font-medium mt-1">30 Oct 2021 – 31 Oct 2023</p>
+              </div>
+              <span class="text-sm text-slate-400">US-based BFS Client</span>
+            </div>
+
+            <p class="mt-5 text-slate-600 leading-relaxed">
+              Worked on banking and financial-services enterprise applications with a strong manual testing
+              focus, supported by targeted Selenium WebDriver automation using Java, TestNG and Maven.
+            </p>
+
+            <div class="mt-6">
+              <h4 class="font-semibold text-slate-800">Testing & Quality</h4>
+              <ul class="mt-3 space-y-2 text-sm text-slate-600 list-disc ml-5">
+                <li>Analyzed requirements and user stories, designed test cases and executed functional, regression, sanity, integration and system testing.</li>
+                <li>Validated data flow between applications and modules, including downloadable PDF and Excel outputs.</li>
+                <li>Tested complex dynamic forms, conditional workflows, approval control points and event-triggered email notifications.</li>
+                <li>Verified application pages and components against requirements and collaborated with developers on defects, retesting and resolution.</li>
+              </ul>
+            </div>
+
+            <div class="mt-6">
+              <h4 class="font-semibold text-slate-800">Automation & Engineering</h4>
+              <ul class="mt-3 space-y-2 text-sm text-slate-600 list-disc ml-5">
+                <li>Developed and maintained a limited set of Selenium WebDriver scripts for repeatable test scenarios, using Java, TestNG and Maven.</li>
+                <li>Worked with Cucumber BDD, data-driven testing, Page Object Model, JUnit, Git/GitHub and reporting tools including Surefire and Extent Reports.</li>
+                <li>Ran sanity checks on newly released Chrome and Edge versions using a virtual machine to verify browser compatibility and application stability.</li>
+              </ul>
+            </div>
+
+            <div class="mt-6 p-4 rounded-xl bg-blue-50 border border-blue-100">
+              <h4 class="font-semibold text-slate-800">Efficiency Improvement</h4>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                Improved a repetitive test-data cleanup task by creating a short JavaScript browser-console loop
+                that handled repeated delete-and-confirm actions safely, reducing manual effort for the team.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How I Work -->
+    <section class="bg-white py-20">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Approach</p>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2">How I approach QA</h2>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-5 mt-10">
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <span class="text-blue-600 font-bold">01</span>
+            <h3 class="font-bold mt-3">Understand</h3>
+            <p class="text-sm text-slate-600 mt-2">Review requirements, user stories, workflows and designs to identify gaps and test conditions.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <span class="text-blue-600 font-bold">02</span>
+            <h3 class="font-bold mt-3">Test</h3>
+            <p class="text-sm text-slate-600 mt-2">Combine structured test cases with exploratory, negative, boundary and role-based testing.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <span class="text-blue-600 font-bold">03</span>
+            <h3 class="font-bold mt-3">Automate</h3>
+            <p class="text-sm text-slate-600 mt-2">Automate repeatable regression flows with Playwright, Selenium or Maestro where it adds value.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+            <span class="text-blue-600 font-bold">04</span>
+            <h3 class="font-bold mt-3">Improve</h3>
+            <p class="text-sm text-slate-600 mt-2">Use clear evidence, reporting, reusable tooling and AI-assisted workflows to improve QA efficiency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-slate-900 text-white py-20">
+      <div class="max-w-6xl mx-auto px-5 text-center">
+        <p class="text-blue-300 font-semibold text-sm uppercase tracking-wider">Contact</p>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Let's build better software.</h2>
+        <p class="text-slate-400 mt-4 max-w-xl mx-auto">
+          Open to QA, automation and quality-focused opportunities where testing and engineering can work together.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="mailto:aswinreji977@gmail.com"
+             class="bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100">
+            ✉ aswinreji977@gmail.com
+          </a>
+          <a href="Aswin_Reji.pdf" target="_blank"
+             class="border border-slate-600 px-6 py-3 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-300">
+            View CV
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 text-slate-500 text-center text-sm py-6">
+    © 2026 Aswin Reji · QA Engineer Portfolio
   </footer>
-</body>
 
+</body>
 </html>
